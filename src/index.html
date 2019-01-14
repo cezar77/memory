@@ -5,9 +5,9 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <section id="game">
-      <div id="cards">
-        <div class="card">
+    <section id="game" ng-app="memoryApp">
+      <div id="cards" ng-controller="MemoryController">
+        <div class="card" ng-repeat="card in deck track by $index">
           <div class="face front"></div>
           <div class="face back"></div>
         </div> <!-- .card -->
