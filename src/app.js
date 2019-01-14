@@ -1,4 +1,7 @@
 import './style.css';
+import angular from 'angular';
+
+angular.module('app', []);
 
 function shuffle() {
   return 0.5 - Math.random();

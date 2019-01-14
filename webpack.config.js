@@ -12,7 +12,7 @@ module.exports = {
     overlay: true
   },
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/app.js',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
