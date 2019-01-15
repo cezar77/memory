@@ -7,9 +7,13 @@
   <body>
     <section id="game" ng-app="memoryApp">
       <div id="cards" ng-controller="MemoryController">
-        <div class="card" ng-repeat="card in deck track by $index">
+        <div class="card"
+             ng-repeat="card in deck track by $index"
+             ng-click="selectCard()"
+             ng-class="{'card-flipped': deck[$index].flipped, 'card-removed': deck[$index].removed}"
+          >
           <div class="face front"></div>
-          <div class="face back"></div>
+          <div class="face back {{ card.name }}"></div>
         </div> <!-- .card -->
       </div> <!-- #cards -->
     </section> <!-- #game -->

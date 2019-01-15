@@ -112,3 +112,17 @@ body {
 .cardDK {
   background-position: -960px -360px;
 }
+
+$padding: 20;
+$columns: 4;
+$width: 80;
+$height: 120;
+
+.card {
+  @for $i from 0 through 11 {
+    &:nth-child(#{$i+1}) {
+      left: ($width + $padding) * ($i % $columns) + px;
+      top: ($height + $padding) * floor($i / $columns) + px;
+    }
+  }
+}
